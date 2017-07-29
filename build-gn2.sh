@@ -3,6 +3,8 @@
 set -e
 set -v
 # Build
+cp gn-standalone.tools.gn.bootstrap.py gn-standalone/tools/gn/bootstrap/bootstrap.py 
+
 cd gn-standalone/tools/gn
 ./bootstrap/bootstrap.py -s
 
