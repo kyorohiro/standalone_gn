@@ -1,4 +1,4 @@
-Google gn build tool standalone
+copy Google gn build tool standalone
 for my project.
 
 
