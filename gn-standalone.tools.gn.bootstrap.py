@@ -29,11 +29,11 @@ BOOTSTRAP_DIR = os.path.dirname(os.path.abspath(__file__))
 GN_ROOT = os.path.dirname(BOOTSTRAP_DIR)
 SRC_ROOT = os.path.dirname(os.path.dirname(GN_ROOT))
 
-is_win = False#sys.platform.startswith('win')
-is_linux = False#sys.platform.startswith('linux')
-is_mac = True#sys.platform.startswith('darwin')
-is_aix = False#sys.platform.startswith('aix')
-is_posix = True#is_linux or is_mac or is_aix
+is_win = sys.platform.startswith('win')
+is_linux = sys.platform.startswith('linux')
+is_mac = sys.platform.startswith('darwin')
+is_aix = sys.platform.startswith('aix')
+is_posix = is_linux or is_mac or is_aix
 
 def check_call(cmd, **kwargs):
   logging.debug('Running: %s', ' '.join(cmd))
